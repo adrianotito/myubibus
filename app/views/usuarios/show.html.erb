@@ -1,0 +1,52 @@
+<h1>/Usuario</h1>
+
+<p>
+  <b>Nome</b><br>
+  <%= @usuario.nome %>
+</p>
+
+<p>
+  <b>Login</b><br>
+  <%= @usuario.login %>
+</p>
+
+<p>
+  <b>Senha</b><br>
+  <%= @usuario.senha %>
+</p>
+
+<p>
+  <b>Email</b><br>
+  <%= @usuario.email %>
+</p>
+
+<p>
+  <b>Data ingresso</b><br>
+  <%= @usuario.data_ingresso %>
+</p>
+
+<p>
+  <b>Data ultimo acesso</b><br>
+  <%= @usuario.data_ultimo_acesso %>
+</p>
+
+<p>
+  <b>Tipo usuario</b><br>
+  <%= @usuario.tipo_usuario %>
+</p>
+
+<p>
+  <b>Port nec especiais</b><br>
+  <%= @usuario.port_nec_especiais %>
+</p>
+
+<p>
+  <b>Tipo nec especial</b><br>
+  <%= @usuario.tipo_nec_especial %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', usuarios_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_usuario_path(@usuario), :class => 'btn' %>
+  <%= link_to 'Delete', usuario_path(@usuario), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

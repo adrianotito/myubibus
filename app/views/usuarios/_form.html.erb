@@ -1,0 +1,73 @@
+<%= form_for @usuario, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Usuario</legend>
+
+    <div class="control-group">
+      <%= f.label :nome, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :nome, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :login, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :login, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :senha, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :senha, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :email, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :email, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :data_ingresso, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.date_select :data_ingresso, :class => 'date_select' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :data_ultimo_acesso, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.date_select :data_ultimo_acesso, :class => 'date_select' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :tipo_usuario, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :tipo_usuario, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :port_nec_especiais, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :port_nec_especiais, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :tipo_nec_especial, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :tipo_nec_especial, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', usuarios_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
